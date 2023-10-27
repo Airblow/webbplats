@@ -1,7 +1,8 @@
-.wrapper{
+
+.wrapper, .wrapper2, .wrapper3{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 70px 50px auto 50px;
+    grid-template-rows: auto 80px auto auto;
     grid-template-areas:
     "header"
     "nav"
@@ -17,7 +18,20 @@ header{
 nav{
     grid-area: nav;
     background-color: rgb(231, 204, 85);
+    margin: 0px;
+    border: 0px;
 
+}
+
+nav > ul > li{
+    background-color: rgb(18, 148, 223);
+    margin: 10px;
+    padding: 10px;
+    border: solid black 1px;
+}
+
+nav > ul{
+    padding: 0px;
 }
 
 main{
@@ -32,6 +46,11 @@ footer{
 
 }
 
+footer > ul > li{
+    text-align: center;
+    font-family: arial;
+}
+
 ul{
     list-style-type: none;
 }
@@ -42,10 +61,14 @@ nav > ul{
     text-align: center;
 }
 
-header > h1{
-    text-align: center;
+h1{
     font-family: arial;
-    background-color: blue;
-    border: solid 1px;
-
+    text-align: center;
 }
+
+h2{
+    font-family: Arial;
+    text-align: center;
+    
+}
+
