@@ -2,7 +2,7 @@
 .wrapper, .wrapper2, .wrapper3{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 80px auto auto;
+    grid-template-rows: auto 85px 720px auto;
     grid-template-areas:
     "header"
     "nav"
@@ -69,6 +69,175 @@ h1{
 h2{
     font-family: Arial;
     text-align: center;
+    padding-left: 0px;
+      
+}
+
+.wrapper2 > main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+    "head mainright"
+    "mainleft mainright";
+}
+
+.omTeknikum{
+    grid-area: mainleft;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.wrapper2 > .headline {
+    grid-area: head;
+
+}
+
+.wrapper2 h2{
+    padding-left: 30px;
+}
+
+.teknikum{
+    grid-area: mainright;
+    margin: 0 auto;
     
 }
+
+.teknikum img{
+    width: 890px;
+    padding: 25px;
+}
+
+.omTeknikum ul{
+    padding: 0px;
+    
+}
+
+.omTeknikum p{
+    font-family: arial;
+    font-weight: bold;
+    
+}
+
+.indexText{
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+}
+
+.indexText img{
+    margin: 20px;
+    width: 800px;
+ 
+}
+
+.wrapper3 .OmMig{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "left"
+    "center"
+    "right";
+    
+}
+
+.wrapper3 > .left{
+    grid-area: left;
+}
+
+.left img{
+    width: 450px;
+    padding-left: 112px;
+}
+
+.wrapper3 > .center{
+    grid-area: center;
+}
+
+.center{
+    text-align: center;
+
+}
+
+.left > p, h3{
+    text-align: center;
+}
+
+.left > p{
+    font-size: 20px;
+}
+    
+
+
+table, th, tr{
+    border: solid 1px black;
+    border-collapse: collapse;
+    
+}
+
+table{
+    margin: auto;
+}
+
+th{
+    padding: 4px;
+    width: 100px;
+}
+
+caption{
+    font-family: arial;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+.wrapper3 > .right{
+    grid-area: right;
+}
+
+.right > img{
+    width: 450px;
+    padding-left: 70px;
+}
+
+tr:nth-child(odd){
+    background-color: rgb(185, 234, 79);
+
+}
+
+tr:nth-child(even){
+    background-color: rgb(166, 240, 255);
+
+}
+
+th:nth-child(2){
+    font-weight: lighter;
+}
+
+th:nth-child(3){
+    font-weight: lighter;
+}
+
+tr:nth-child(1){
+    background-color: rgb(253, 253, 253);
+font-weight: 1000;
+}
+
+p{
+    font-family: arial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
