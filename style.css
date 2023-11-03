@@ -1,8 +1,8 @@
 
-.wrapper, .wrapper2, .wrapper3{ 
+.wrapper, .wrapper2, .wrapper3{ /*skapar grid för alla sidor, så att footer, den globala menyn och webbplatstiteln är lika*/
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 85px 750px auto;
+    grid-template-rows: auto 85px 724px auto;
     grid-template-areas:
     "header"
     "nav"
@@ -10,70 +10,64 @@
     "footer";
 }
 
-header{
+header{ /*Gör så att sidohuvet är längst upp i grid arean "header" och har en blå bakgrundsfärg*/
     grid-area: header;
     background-color: rgba(9, 50, 138, 0.733);
 }
 
-nav{
+nav{ /*Den globala menyn. Gör så att "nav" ligger i grid arean "nav" och får en gul bakgrundsfärg.*/
     grid-area: nav;
     background-color: rgb(231, 204, 85);
-    margin: 0px;
-    border: 0px;
 
 }
 
-nav > ul > li{
+nav > ul > li{ /*Gör så att listelementen som ligger under ul som den ligger under nav får en ljusare blå som bakgrundsfärg, och så att de är lite mellanrum mellan dem*/
     background-color: rgb(18, 148, 223);
     margin: 10px;
-    padding: 10px;
+    padding: 10px; /*gör "boxarna" med länkarna lite större så att de inte är pinnsmala, bara för att det ser bättre ut.*/
     border: solid black 1px;
 }
 
-nav > ul{
+nav > ul{ /*Detta kodblock gör så att ul inom nav inte har någon padding vilket det har annars, gör också en regional grid så att listelementen ligger horizontelt*/
     padding: 0px;
-}
-
-main{
-    grid-area: main;
-    background-color:rgba(255, 255, 255, 0.678);
-
-}
-
-footer{
-    grid-area: footer;
-    background-color: beige;
-
-}
-
-footer > ul > li{
-    text-align: center;
-    font-family: arial;
-}
-
-ul{
-    list-style-type: none;
-}
-
-nav > ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
 }
 
-h1{
+main{ /*lägger main inom grid area main, ger den en vitaktig bakgrundsfärg*/
+    grid-area: main;
+    background-color:rgba(255, 255, 255, 0.678);
+
+}
+
+footer{ /*lägger footer inom grid arean footer och ger den bakgrundsfärgen beige*/
+    grid-area: footer;
+    background-color: beige;
+
+}
+
+footer > ul > li{ /*gör så att listan inom footern är centrerad och har typsnittet arial*/
+    text-align: center;
+    font-family: arial;
+}
+
+ul{ /*gör så att oorganiserade listor inte har någon stil, alltså inga punkter som markerar varje listelement*/
+    list-style-type: none;
+}
+
+h1{ /*Ändrar rubriken till typsnitt arial och centrerar den*/
     font-family: arial;
     text-align: center;
 }
 
-h2{
+h2{ /*Ändrar alla underrubriker 2 till typsnittet arial, centrerar den*/
     font-family: Arial;
     text-align: center;
-    padding-left: 0px;
       
 }
 
-.wrapper2 > main{
+.wrapper2 > main{ /*gör en grid av main inom wrapper2*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px auto;
@@ -82,56 +76,51 @@ h2{
     "mainleft mainright";
 }
 
-.omTeknikum{
+.omTeknikum{ /*Gör så att div omTeknikum hamnar i grid area mainleft, centreras och har vänster padding 30px*/
     grid-area: mainleft;
     text-align: center;
     padding-left: 30px;
 }
 
-.wrapper2 > .headline {
+.wrapper2 > h2 { /*Gör så att underrubrik 2 hamnar i grid area head*/
     grid-area: head;
 
 }
 
-.wrapper2 h2{
-    padding-left: 30px;
-}
-
-.teknikum{
+.teknikum{ /*Gör så att bilden inom div med klass teknikum hamnar i grid area mainright och centreras*/
     grid-area: mainright;
     margin: 0 auto;
     
 }
 
-.teknikum img{
+.teknikum > img{ /*Ändrar storleken på bilden, och gör så att den inte nuddar toppen med hjälp utav padding*/
     width: 890px;
     padding: 25px;
 }
 
-.omTeknikum ul{
+.omTeknikum > ul{ /*tar bort paddingen på listan inom omTeknikum*/
     padding: 0px;
     
 }
 
-.omTeknikum p{
-    font-family: arial;
+.omTeknikum > p{ /*Ändrar typsnitt och tjocklek på paragraferna inom omTeknikum*/
     font-weight: bold;
     
 }
 
-.indexText{
+.indexText{ /*Ändrar typsnitt, teckenstorlek och centrerar allt inom klassen indexText*/
     text-align: center;
     font-family: arial;
     font-size: 25px;
 }
 
-.indexText img{
+.indexText > img{ /*Ändrar storlek och positionering av bilden inom indexText*/
     margin: 20px;
     width: 800px;
  
 }
 
-.wrapper3 .OmMig{
+.wrapper3 .OmMig{ /*gör en grid i wrapper3 och OmMig, blir lite konstigt och jag ångrar det, men det blir för mycket krångel att ändra. Valideringen såg inget fel på det häller*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -142,89 +131,83 @@ h2{
     
 }
 
-.wrapper3 > .left{
+.wrapper3 > .left{ /*lägger left inom grid arean left*/
     grid-area: left;
 }
 
-.left img{
+.left > img{ /*Ändrar storlek och position utav bilden i left*/
     width: 450px;
     padding-left: 112px;
 }
 
-.wrapper3 > .center{
+.wrapper3 > .center{ /*lägger  center inom grid arean center*/
     grid-area: center;
 }
 
-.center{
+.center{ /*Gör så att all text inom center centreras*/
     text-align: center;
 
 }
 
-.left > p, h3{
+.left > p, h3{ /*gör så att alla p och h3 inom left centreras*/
     text-align: center;
 }
 
-.left > p{
+.left > p{ /*ändrar teckenstorleken på alla p inom left*/
     font-size: 20px;
 }
     
-
-
-table, th, tr{
+table, td, tr{ /*skapar en 1 pixlig svart solid border runtom table, td och tr elementen, sedan fixar bordern mellan de olika elementen med collapse*/
     border: solid 1px black;
     border-collapse: collapse;
     
 }
 
-table{
+table{ /*Centrerar tabellen*/
     margin: auto;
 }
 
-th{
+td{ /*Gör så att cellerna inom tabellen blir lika stora*/
     padding: 4px;
     width: 100px;
 }
 
-caption{
+caption{ /*Ändrar tabellens rubrik, typsnitt arial, storlek 17 pixlar, tjocktext*/
     font-family: arial;
     font-size: 17px;
     font-weight: bold;
     padding: 4px;
 }
 
-.wrapper3 > .right{
+.wrapper3 > .right{ /*Placerar right inom gridområdet right*/
     grid-area: right;
 }
 
-.right > img{
+.right > img{ /*Ändrar placering och storlek på bild elementen inom right*/
     width: 450px;
     padding-left: 70px;
 }
 
-tr:nth-child(odd){
+tr:nth-child(odd){ /*Varje udda rad inom tabellen får en viss bakgrundsfärg*/
     background-color: rgb(185, 234, 79);
 
 }
 
-tr:nth-child(even){
+tr:nth-child(even){ /*Varje jämn rad inom tabellen får en viss bakgrundsfärg*/
     background-color: rgb(166, 240, 255);
 
 }
 
-th:nth-child(2){
-    font-weight: lighter;
+td:nth-child(1){ /*Gör all text inom den första kolumnen tjock*/
+    font-weight: bold;
 }
 
-th:nth-child(3){
-    font-weight: lighter;
-}
-
-tr:nth-child(18){
+tr:nth-child(18){ /*Den 18de raden i tabellen får en annan bakgrundsfärg och texten blir tjock.*/
     background-color: rgb(253, 253, 253);
-    font-weight: 1000;
+    font-weight: bold;
 }
 
-p{
+p{ /*ändrar alla p på hela sidan till typsnittet arial*/
     font-family: arial;
 }
 
